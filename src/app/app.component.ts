@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'routed-module';
+  modules: string[] = [];
+
+  constructor(preloadStrategy: SelectivePreloadingStrategyService) {
+    this.modules = preloadStrategy.preloadedModules;
+  }
 }
