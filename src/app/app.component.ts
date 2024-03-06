@@ -8,9 +8,9 @@ import { SelectivePreloadingStrategyService } from './selective-preloading-strat
 })
 export class AppComponent {
   title = 'routed-module';
-  modules: string[] = [];
+  //modules: string[] = [];
 
-  constructor(preloadStrategy: SelectivePreloadingStrategyService) {
-    this.modules = preloadStrategy.preloadedModules;
+  constructor() {
+    //this.modules = preloadStrategy.preloadedModules;
   }
 }
