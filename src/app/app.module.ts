@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CartModule } from './cart/cart.module';
 import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
 
 @NgModule({
@@ -11,7 +12,8 @@ import { SelectivePreloadingStrategyService } from './selective-preloading-strat
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CartModule
   ],
   providers: [SelectivePreloadingStrategyService],
   bootstrap: [AppComponent]
